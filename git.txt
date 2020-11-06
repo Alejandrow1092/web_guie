@@ -1,0 +1,39 @@
+
+	
+1) Poner un editor de texto para agregar comentarios en git
+
+1) git config --global core.editor "'C:\Program Files\Sublime Text 3/sublime_text.exe' -w"
+	->Configura el  
+
+ git checkout -- nombre archivo
+
+ echo "# Proyecto-POO" >> README.md
+2) git init #en la carpeta
+3) git add README.md // agregar algun archivo
+4) git add . // agrega todos los archivos de una intencion
+5) git commit -m "first commit" //pasar al staging area y guardar cambios agregando un comment rapido
+	-> git config --global user.email "amrkratos@hotmail.com" //si te pide poner un usuario
+6) git remote add origin https://github.com/Alejandrow1092/Proyecto-POO.git //indicas el repositorio a donde subiras los archivos
+									    //que esten en staging area con push
+7) git push -u origin master //Pasa los archivos del staging area al repositorio en github
+
+8) git checkout -b iss53 //para crear un branch y cambiarnos directamente
+	->git checkout nombreRama //Solo crea la rama
+9) git status // ver los git que hay
+10) git checkout master //cambiarse a la rama principal
+11) git merge hotfix	//fusionar las ramas
+12) git diff //diferencias
+13) git pull
+14) git branch //muestra las ramas
+	->git branch nuevo //crea la rama nuevo
+	->git checkout -b nombreRama // crea una nueva rama y nos cambia a ella
+	->git branch -d nombreRama // borra la rama 
+15)git pull //trae el codigo que haya cambiado de un remoto
+16)git clone DIRECCION_WEB// nos trae el git del repositorio
+
+░█▀▀▀░█▀▀█░█▀▀▀░▀░█░░░░█▀▀░█░░░
+░█▀▀░░█▀▀█░▀▀▀█░█░█░░░░█▀▀░█░░░
+░▀░░░░▀░░▀░▀▀▀▀░▀░▀▀▀░░▀▀▀░▀▀▀░
+▀█▀░█░█░▀█▀░█▀█░█▀▀▄░█░█▀▀█░█░░
+░█░░█░█░░█░░█░█░█▀▀█░█░█▀▀█░█░░
+░▀░░▀▀▀░░▀░░▀▀▀░▀░░▀░▀░▀░░▀░▀▀▀
