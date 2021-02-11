@@ -1,9 +1,9 @@
-*{
+*,*:before,*:after{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    outline: 0;
 }
-
 :root{
     --primer-color: #CAD2C5;
     --segundo-color:#84A98C;
@@ -11,39 +11,197 @@
     --cuarto-color: #354F52;
     --quinto-color: #2F3E46;
 }
-
 html{
     font-size: 62.5%;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-
 header{
     width: 100vw;
-    height: 8rem;
     background-color: var(--tercer-color);
+    border-bottom: 1px solid --quinto-color;
+    box-shadow: 5px 0 10px rgba(0, 0, 0, .6);
+    display: flex;
 }
+/*Estilos para la lista del nav*/
 
-main{
 
+nav ul{
+    list-style: none;
+    padding: 10px;
 }
-
+nav ul li{
+    color: var(--primer-color);
+    font-size: 2.5rem;
+    text-decoration: none;
+    padding: 10px;
+    cursor: pointer;
+}
+nav ul li:hover{
+    background-color: var(--quinto-color);
+    transition: 0.4s;
+}
+nav ul li a{
+    text-decoration: none;
+    color: var(--primer-color);
+}
+ /*Estilos para el logo*/
+.conten_logo{
+    position: absolute;
+    display: block;
+}
+/*Estilos para el footer*/
 footer{
     position: absolute;
     width: 100vw;
-    height: 20rem;
+    height: 200px;
     display: block;
     bottom: 0;
     background: var(--quinto-color);
+    z-index: 20;
 }
 
 @media screen and (max-width: 767px){
-
-}
-
-@media screen and (min-width: 768px) and (max-width: 1023px){
-
-}
-
-@media screen and (min-width: 1024px){
+    header{    
+        height: 80px;
+    }
+    /*Estilos para el icono del menu*/
+    .icono_menu{
+        position: absolute;
+        display: block;
+        z-index: 25;
+        order: 1;
+    }
+    .icono_menu img{
+        width: 60px;
+        height: 60px;
+        padding: 10px;
+        cursor: pointer;
+    }
+    /*Estilos para el nav*/
+    .conten_menu{
+        background-color: var(--cuarto-color);
+        box-shadow: 2px 0px 5px 2px var(--primer-color);
+        width: 75vw;
+        height: 100vh;
+        left: -100vw;
+        transition: all 0.5s ease;
+        z-index: 30;
+        order: 2;
+        position: fixed;
+    }    
+    .conten_menu ul{
+        transform: translateY(80px);
+    }
+    .conten_menu ul li{
+        color: var(--primer-color);
+        display: block;
+        font-size: 2.5rem;
+        text-decoration: none;
+        padding: 10px;
+        cursor: pointer;
+    }
+    .conten_menu ul li:hover{
+        background-color: var(--quinto-color);
+    }
     
+    /*Estilos para el logo*/
+    .conten_logo{
+        margin: 0 auto;
+        order: 3;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .conten_logo img{
+        width: 80px;
+        height: 80px;
+    }
+    
+}
+/*@media screen and (max-width: 767px) and (orientation: landscape){
+    nav{
+        height: 900px;
+        overflow: scroll;
+    }
+}*/
+@media screen and (min-width: 768px){
+    header{
+        height: 90px;
+        justify-content: flex-end;
+        align-items: center;
+    }
+   /*Estilos para el icono del menu*/
+    .icono_menu{
+    position: relative;
+    z-index: -10;
+    }
+    .icono_menu img{
+        width: 40px;
+        height: 10px;
+    }
+    /*Estilos para el logo*/
+    .conten_logo{
+        left: 0;
+    }
+    .conten_logo img{
+        width: 90px;
+        height: 90px;
+    }
+    /*Estilos para el nav*/
+    nav ul{
+        display: flex;
+    }
+    nav ul li{
+        font-size: 2.5rem;
+    }
+    nav ul li a{
+        display: block;
+    }
+ 
+}
+@media screen and (min-width: 1024px){
+    header{
+        height: 100px;
+    }
+    .conten_logo img{
+        width: 100px;
+        height: 100px;
+    }/*Estilos para el icono*/
+    .icono_menu img{
+        width: 50px;
+        height: 10px;
+    }
+}
+@media screen and (min-width: 1440px){
+    header{
+        height: 150px;
+    }
+    nav ul li{
+        font-size: 3.51rem;
+    }
+    .conten_logo img{
+        width: 150px;
+        height: 150px;
+    }
+    /*Estilos para el icono*/
+    .icono_menu img{
+        width: 70px;
+        height: 10px;
+    }
+}
+@media screen and (min-width: 2560px){
+    header{
+        height: 250px;
+    }
+    nav ul li{
+        font-size: 6.25rem;
+    }
+    .conten_logo img{
+        width: 250px;
+        height: 250px;
+    }
+    /*Estilos para el icono*/
+    .icono_menu img{
+        width: 125px;
+        height: 10px;
+    }
 }
