@@ -1,5 +1,49 @@
-body{
+*{
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background-color: #CAD2C5;
+}
+
+:root{
+    --primer-color: #CAD2C5;
+    --segundo-color:#84A98C;
+    --tercer-color: #52796F;
+    --cuarto-color: #354F52;
+    --quinto-color: #2F3E46;
+}
+
+html{
+    font-size: 62.5%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header{
+    width: 100vw;
+    height: 8rem;
+    background-color: var(--tercer-color);
+}
+
+main{
+
+}
+
+footer{
+    position: absolute;
+    width: 100vw;
+    height: 20rem;
+    display: block;
+    bottom: 0;
+    background: var(--quinto-color);
+}
+
+@media screen and (max-width: 767px){
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px){
+
+}
+
+@media screen and (min-width: 1024px){
+    
 }
