@@ -15,16 +15,18 @@ html{
     font-size: 62.5%;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+body{
+    display: flex;
+    flex-wrap: wrap;
+}
 header{
     width: 100vw;
     background-color: var(--tercer-color);
     border-bottom: 1px solid --quinto-color;
-    box-shadow: 5px 0 10px rgba(0, 0, 0, .6);
+    box-shadow: 0px 0px 15px 0px var(--quinto-color);
     display: flex;
 }
 /*Estilos para la lista del nav*/
-
-
 nav ul{
     list-style: none;
     padding: 10px;
@@ -49,17 +51,73 @@ nav ul li a{
     position: absolute;
     display: block;
 }
+/*Estilos para el main*/
+main{
+    width: 100vw;
+    height: 1000px;
+}
 /*Estilos para el footer*/
 footer{
-    position: absolute;
     width: 100vw;
     height: 200px;
-    display: block;
-    bottom: 0;
-    background: var(--quinto-color);
     z-index: 20;
+    background: var(--quinto-color);
+    position: relative;
+    display: flex;
+    bottom: 0;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
+footer .conten_logof{
+    align-self: center;
+}
+.conten_logof img{  
+    width: 90px;
+    height: 90px;
+}
+footer .copy{
+    padding: 10px 20px;
+    align-self: flex-end;
+    color: var(--primer-color);
+    font-size: 1.6rem;
+}
+footer .iconos{
+    height: 60px;
+    align-self: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+.iconos p{
+    align-self: center;
+    color: var(--primer-color);
+    font-size: 1.6rem;
+}
+.iconos .facebook{
+    width: 20px;
+    height: 20px;
+    align-self: center;
+    margin: 0px 5px;
+}
+.iconos .twitter{
+    width: 20px;
+    height: 20px;
+    align-self: center;
+    margin: 0px 5px;
+}
+.iconos .instagram{
+    width: 20px;
+    height: 20px;
+    align-self: center;
+    margin: 0px 5px;
+}
+.iconos .tik-tok{
+    width: 20px;
+    height: 20px;
+    align-self: center;
+    margin: 0px 5px;
+}
 @media screen and (max-width: 767px){
     header{    
         height: 80px;
@@ -80,11 +138,11 @@ footer{
     /*Estilos para el nav*/
     .conten_menu{
         background-color: var(--cuarto-color);
-        box-shadow: 2px 0px 5px 2px var(--primer-color);
+        box-shadow: 25vw 0px 0px 0px rgb(47, 62, 70, 0.5);
         width: 75vw;
         height: 100vh;
         left: -100vw;
-        transition: all 0.5s ease;
+        transition:all 0.1s step-end;
         z-index: 30;
         order: 2;
         position: fixed;
@@ -131,12 +189,7 @@ footer{
     }
    /*Estilos para el icono del menu*/
     .icono_menu{
-    position: relative;
-    z-index: -10;
-    }
-    .icono_menu img{
-        width: 40px;
-        height: 10px;
+        display: none;
     }
     /*Estilos para el logo*/
     .conten_logo{
@@ -166,10 +219,7 @@ footer{
         width: 100px;
         height: 100px;
     }/*Estilos para el icono*/
-    .icono_menu img{
-        width: 50px;
-        height: 10px;
-    }
+   
 }
 @media screen and (min-width: 1440px){
     header{
@@ -183,10 +233,7 @@ footer{
         height: 150px;
     }
     /*Estilos para el icono*/
-    .icono_menu img{
-        width: 70px;
-        height: 10px;
-    }
+    
 }
 @media screen and (min-width: 2560px){
     header{
@@ -200,8 +247,5 @@ footer{
         height: 250px;
     }
     /*Estilos para el icono*/
-    .icono_menu img{
-        width: 125px;
-        height: 10px;
-    }
+   
 }
